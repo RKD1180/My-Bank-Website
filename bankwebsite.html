@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css"
+      rel="stylesheet"
+    />
+    <title>Bank Website2</title>
+  </head>
+  <body>
+    <header>
+      <h2 class="text-center text-4xl mt-14">
+        Welcome to
+        <span class="text-blue-700 font-semibold">My Blancesheet</span>
+      </h2>
+    </header>
+    <main>
+      <!-- balance and transaction -->
+      <section class="mx-auto mt-8 w-3/4">
+        <div class="grid grid-cols-3 gap-8">
+          <div class="text-white bg-blue-400 p-8 rounded">
+            <h3 class="text-3xl">Deposite</h3>
+            <h3 class="text-4xl">$<span id="total_depo">0</span></h3>
+          </div>
+          <div class="text-white bg-green-300 p-8 rounded">
+            <h3 class="text-3xl">Withdraw</h3>
+            <h3 class="text-4xl">$ <span id="total_withdraw">0</span></h3>
+          </div>
+          <div class="text-white bg-yellow-300 p-8 rounded">
+            <h3 class="text-3xl">Balance</h3>
+            <h3 class="text-4xl">$<span id="total_blance">1220</span></h3>
+          </div>
+        </div>
+      </section>
+      <!-- balance deposite and withdraw -->
+      <section class="mx-auto mt-8 w-3/4">
+        <div class="grid grid-cols-2 gap-8">
+          <div class="bg-purple-200 p-4 rounded">
+            <h3 class="text-3xl mt-4">Please Deposite</h3>
+            <div>
+              <input
+                class="rounded border border-gray-300 block mb-4 mt-4 w-3/4 p-2"
+                id="depo_amount"
+                type="text"
+                placeholder="$ Enter Deposite Amount "
+              />
+              <button class="bg-yellow-300 px-4 py-2 rounded" id="depo_btn">
+                Deposite
+              </button>
+            </div>
+          </div>
+
+          <div class="bg-red-100 p-4 rounded">
+            <h3 class="text-3xl mt-4">Please Withdraw</h3>
+            <div>
+              <input
+                class="rounded border border-gray-300 block mb-4 mt-4 w-3/4 p-2"
+                id="withdraw_amount"
+                type="text"
+                placeholder="$ Enter withdraw Amount "
+              />
+              <button class="bg-yellow-300 px-4 py-2 rounded" id="withdraw_btn">
+                Withdraw
+              </button>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- js file -->
+    <script src="./js/adBanking.js"></script>
+  </body>
+</html>
